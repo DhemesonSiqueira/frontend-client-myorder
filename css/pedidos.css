@@ -1,113 +1,183 @@
 .card {
-    border: none;
-    border-radius: 10px;
-  
+  border: none;
+  border-radius: 10px;
 }
 
 .c-details span {
-    font-weight: 300;
-    font-size: 13px
+  font-weight: 300;
+  font-size: 13px;
 }
 
 .icon {
-    width: 50px;
-    height: 50px;
-    background-color: #eee;
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 39px
+  width: 50px;
+  height: 50px;
+  background-color: #eee;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 39px;
 }
 
 .badge span {
-    background-color: #fffbec;
-    width: 60px;
-    height: 25px;
-    padding-bottom: 3px;
-    border-radius: 5px;
-    display: flex;
-    color: #fed85d;
-    justify-content: center;
-    align-items: center
+  background-color: #fffbec;
+  width: 60px;
+  height: 25px;
+  padding-bottom: 3px;
+  border-radius: 5px;
+  display: flex;
+  color: #fed85d;
+  justify-content: center;
+  align-items: center;
 }
 
 .progress {
-    height: 10px;
-    border-radius: 10px
+  height: 10px;
+  border-radius: 10px;
 }
 
 .progress div {
-    background-color: red
+  background-color: red;
 }
 
 .text1 {
-    font-size: 14px;
-    font-weight: 600
+  font-size: 14px;
+  font-weight: 600;
 }
 
 .text2 {
-    color: #a5aec0
+  color: #a5aec0;
 }
-.seta{
-    font-size: 28px;
-    color: #000;
+.seta {
+  font-size: 28px;
+  color: #000;
 }
-.seta:hover{
-    color:#ffc700;
+.seta:hover {
+  color: #ffc700;
 }
-small{
-    color: #808080;
+small {
+  color: #808080;
 }
 
-.btn{
-    display:none;
+.btn {
+  display: none;
 }
-body{
-    color: #000 !important; 
+body {
+  color: #000 !important;
 }
-a{
-    color: #000 !important; 
-    text-decoration: none !important;
+a {
+  color: #000 !important;
+  text-decoration: none !important;
 }
-.tab{
-    display: none;
+.tab {
+  display: none;
 }
 @media only screen and (max-width: 800px) {
-    
+  .tab {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 55px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    display: flex;
+    overflow-x: auto;
+  }
+
+  .nav__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    min-width: 50px;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: sans-serif;
+    font-size: 13px;
+    color: #444444;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: background-color 0.1s ease-in-out;
+  }
+
+  .nav__link:hover {
+    background-color: #eeeeee;
+  }
+
+  .nav__link--active {
+    color: #009578;
+  }
+
+  .corpo {
+    margin-top: 50%;
+  }
+
+  .preto {
+    color: #000;
+  }
+
+  @media only screen and (max-width: 800px) {
+    .foto-perfil {
+      width: 100%;
+      height: 170px;
+    }
+
+    body {
+      margin: 0 0 55px 0;
+    }
+
+    a {
+      color: #000;
+      text-decoration: none;
+    }
+
+    .nav {
+      display: none;
+    }
+
     .tab {
-     position: fixed;
-     bottom: 0;
-     width: 100%;
-     height: 55px;
-     box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
-     background-color: #ffffff;
-     display: flex;
-     overflow-x: auto;
- }
- 
- .nav__link {
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     justify-content: center;
-     flex-grow: 1;
-     min-width: 50px;
-     overflow: hidden;
-     white-space: nowrap;
-     font-family: sans-serif;
-     font-size: 13px;
-     color: #444444;
-     text-decoration: none;
-     -webkit-tap-highlight-color: transparent;
-     transition: background-color 0.1s ease-in-out;
- }
- 
- .nav__link:hover {
-     background-color: #eeeeee;
- }
- 
- .nav__link--active {
-     color: #009578;
- }
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      height: 55px;
+      box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+      background-color: #ffffff;
+      display: flex;
+      overflow-x: auto;
+    }
+
+    .br {
+      display: none;
+    }
+
+    .nav__link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex-grow: 1;
+      min-width: 50px;
+      overflow: hidden;
+      white-space: nowrap;
+      font-family: sans-serif;
+      font-size: 13px;
+      color: #000;
+      text-decoration: none;
+      -webkit-tap-highlight-color: transparent;
+      transition: background-color 0.1s ease-in-out;
+    }
+
+    .nav__link:hover {
+      background-color: #eeeeee;
+    }
+
+    .nav__link--active {
+      color: #009578;
+    }
+
+    .nav__icon {
+      font-size: 18px;
+    }
+  }
 }
