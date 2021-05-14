@@ -1,182 +1,171 @@
-.ainn{
-   
-    font-weight: bold;
- 
-  
- }
-     .preto {
-         color: #000;
-     }
-     .card{
-  
+.ainn {
+  font-weight: bold;
+}
+.preto {
+  color: #000;
+}
+.card {
   border: none;
   border-radius: 10px;
   background-color: rgba(245, 245, 245, 1);
- 
-  
- }
- 
- 
- .btn-ama{
-     background-color: #ffc700;
-     color: #fff;
- }
- .w{
-     background-color: #ffc700;
-     border-radius: 0 0 30px 30px;
- }
- .a{
-     color: #000;
- }
- .a:hover{
- color: #ffc700;
- }
- .e{
-     color: #ffc700;
- }
- .m{
- 
-     padding: 10px;
- 
- }
- .perfil{
-     border-radius: 50%;
-     width: 20%;
-     height:200px;
- }
- .tab{
-     display: none;
- }
- 
- .icon {
-     color: #ffc700;
- }
- a{
-     color: #000 !important;
- }
- 
- /*NAV BAR */
- 
- .nav{
-     position: fixed;
-     width: 100%;
- }
- .navbar-nav>li>a {
-     text-transform: uppercase;
-     font-size: 12px;
-     margin-right: 20px;
-     color: #fff
- }
- 
- .navbar-toggler {
-     padding: .20rem .50rem;
-     font-size: 1.25rem;
-     line-height: 1;
-     background-color: transparent;
-     border: 1px solid white
- }
- 
- .nav-link {
-     color: #000 !important
- }
- 
- .wrapper {
-     width: 100%;
-     position: absolute;
-     height: 100%;
-     background-color: #ffc700;
-     clip-path: polygon(81% 0, 100% 0, 100% 50%, 100% 100%, 71% 100%);
-     transition: 1s all
- }
- 
- .navbar-brand {
-     color: #fff;
-     font-family: 'Allerta Stencil', sans-serif;
-     margin-bottom: 4px;
-     font-size: 27px
- }
- 
- .navbar-red:hover .wrapper {
-     clip-path: polygon(81% 0, 100% 0, 100% 50%, 100% 100%, 65% 100%)
- }
- 
- .navbar-brand:hover {
-     color: #000
- }
- 
- .navbar-red {
-   background-color: rgba(245, 245, 245, 1);
- color: #000;
- }
- 
- .all-show {
-     z-index: 10
- }
- a{
-     text-decoration: none !important;
- }
- 
- .tudo{
-     margin-top: -20px;
- }
- @media only screen and (max-width: 800px) {
- 
- 
-   .perfil{
-     border-radius: 50%;
-     width: 35%;
-     height:105px;
- }
- .nav{
-     display:none;
- }
-   body {
-     margin: 0 0 55px 0;
- }
- 
- .tab {
-     position: fixed;
-     bottom: 0;
-     width: 100%;
-     height: 55px;
-     box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
-     background-color: #ffffff;
-     display: flex;
-     overflow-x: auto;
- }
- 
- .nav__link {
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     justify-content: center;
-     flex-grow: 1;
-     min-width: 50px;
-     overflow: hidden;
-     white-space: nowrap;
-     font-family: sans-serif;
-     font-size: 13px;
-     color: #444444;
-     text-decoration: none;
-     -webkit-tap-highlight-color: transparent;
-     transition: background-color 0.1s ease-in-out;
- }
- 
- .nav__link:hover {
-     background-color: #eeeeee;
- }
- 
- .nav__link--active {
-     color: #009578;
- }
- 
- .nav__icon {
-     font-size: 18px;
- }
- .tudo{
-     margin-top: -100px;
- }
- }
- .aaa{
-     border: none;
- }
+}
+
+.btn-ama {
+  background-color: #ffc700;
+  color: #fff;
+}
+.w {
+  background-color: #ffc700;
+  border-radius: 0 0 30px 30px;
+}
+.a {
+  color: #000;
+}
+.a:hover {
+  color: #ffc700;
+}
+.e {
+  color: #ffc700;
+}
+.m {
+  padding: 10px;
+}
+.perfil {
+  border-radius: 50%;
+  width: 20%;
+  height: 200px;
+}
+.tab {
+  display: none;
+}
+
+.icon {
+  color: #ffc700;
+}
+a {
+  color: #000 !important;
+}
+
+/*NAV BAR */
+
+.nav {
+  position: fixed;
+  width: 100%;
+}
+.navbar-nav > li > a {
+  text-transform: uppercase;
+  font-size: 12px;
+  margin-right: 20px;
+  color: #fff;
+}
+
+.navbar-toggler {
+  padding: 0.2rem 0.5rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  background-color: transparent;
+  border: 1px solid white;
+}
+
+.nav-link {
+  color: #000 !important;
+}
+
+.wrapper {
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  background-color: #ffc700;
+  clip-path: polygon(81% 0, 100% 0, 100% 50%, 100% 100%, 71% 100%);
+  transition: 1s all;
+}
+
+.navbar-brand {
+  color: #fff;
+  font-family: "Allerta Stencil", sans-serif;
+  margin-bottom: 4px;
+  font-size: 27px;
+}
+
+.navbar-red:hover .wrapper {
+  clip-path: polygon(81% 0, 100% 0, 100% 50%, 100% 100%, 65% 100%);
+}
+
+.navbar-brand:hover {
+  color: #000;
+}
+
+.navbar-red {
+  background-color: rgba(245, 245, 245, 1);
+  color: #000;
+}
+
+.all-show {
+  z-index: 10;
+}
+a {
+  text-decoration: none !important;
+}
+
+.tudo {
+  margin-top: -20px;
+}
+@media only screen and (max-width: 800px) {
+  .perfil {
+    border-radius: 50%;
+    width: 35%;
+    height: 105px;
+  }
+  .nav {
+    display: none;
+  }
+  body {
+    margin: 0 0 55px 0;
+  }
+
+  .tab {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 55px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    display: flex;
+    overflow-x: auto;
+  }
+
+  .nav__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    min-width: 50px;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: sans-serif;
+    font-size: 13px;
+    color: #444444;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: background-color 0.1s ease-in-out;
+  }
+
+  .nav__link:hover {
+    background-color: #eeeeee;
+  }
+
+  .nav__link--active {
+    color: #009578;
+  }
+
+  .nav__icon {
+    font-size: 18px;
+  }
+  .tudo {
+    margin-top: -100px;
+  }
+}
+.aaa {
+  border: none;
+}

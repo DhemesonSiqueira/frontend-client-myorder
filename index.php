@@ -12,9 +12,10 @@
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- Custom styles for this template-->
+  <link rel="stylesheet" href="./css/index.css">
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/index.css">
 
 </head>
 
@@ -165,7 +166,6 @@
   <?php include_once("sacola.php"); ?>
 
   <!---tab bar--->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <nav class="tab">
     <a href="cards.php" class="nav__link ">
       <i class="nav__icon"><img width="22px" src="img/home.svg"></i>

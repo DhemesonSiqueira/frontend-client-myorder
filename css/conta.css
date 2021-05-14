@@ -1,153 +1,134 @@
-.ainn{
-   
-    font-weight: bold;
- 
-  
- }
-     .preto {
-         color: #000;
-     }
-     .card{
-  
+.ainn {
+  font-weight: bold;
+}
+.preto {
+  color: #000;
+}
+.card {
   border: none;
   border-radius: 10px;
   background-color: rgba(245, 245, 245, 1);
- 
-  
- }
- a{
-     color: #000 !important;
- }
- .btn-ama{
-     background-color: #ffc700;
-     color: #000;
- }
- 
- .containerr{
- 
-   position: relative;
-   margin-top: 5%;
- }
- .containerr .wrapper{
-   position: relative;
-   height: 100px;
-   width: 20%;
-   border-radius: 50%;
-   background: #000;
-   border: 2px dashed #ffc700;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   overflow: hidden;
-   left: 40%;
- 
- }
- .wrapper.active{
-   border: none;
- }
- .wrapper .image{
-   position: absolute;
-   height: 100%;
-   width: 100%;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-  
- }
- .wrapper img{
-   height: 100%;
-   width: 100%;
-   object-fit: cover;
- }
- .wrapper .icon{
-   font-size: 60px;
-   text-align: center;
-   margin-left: 50px !important;
- 
- }
- .wrapper .text{
-   font-size: 20px;
-   font-weight: 500;
-   color: #5B5B7B;
- }
- 
- .wrapper.active:hover #cancel-btn i{
-   display: block;
- }
- .wrapper #cancel-btn i:hover{
-   color: #e74c3c;
- }
- 
- .wrapper.active:hover .file-name{
-   display: block;
- }
- .containerr #custom-btn{
-   margin-top: 20px;
-   display: block;
-   outline: none;
- margin-left: 40% !important;
- 
- 
-   cursor: pointer;
-  
- }
-   .tab{
-     display: none;
-   }
- .btn{
-   color: #000;
- }
- .card{
-    right: -330px ;
-    z-index: 1;
-    margin-top: 9px !important;
+}
+a {
+  color: #000 !important;
+}
+.btn-ama {
+  background-color: #ffc700;
+  color: #000;
+}
+
+.containerr {
+  position: relative;
+  margin-top: 5%;
+}
+.containerr .wrapper {
+  position: relative;
+  height: 100px;
+  width: 20%;
+  border-radius: 50%;
+  background: #000;
+  border: 2px dashed #ffc700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  left: 40%;
+}
+.wrapper.active {
+  border: none;
+}
+.wrapper .image {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.wrapper .icon {
+  font-size: 60px;
+  text-align: center;
+  margin-left: 50px !important;
+}
+.wrapper .text {
+  font-size: 20px;
+  font-weight: 500;
+  color: #5b5b7b;
+}
+
+.wrapper.active:hover #cancel-btn i {
+  display: block;
+}
+.wrapper #cancel-btn i:hover {
+  color: #e74c3c;
+}
+
+.wrapper.active:hover .file-name {
+  display: block;
+}
+.containerr #custom-btn {
+  margin-top: 20px;
+  display: block;
+  outline: none;
+  margin-left: 40% !important;
+
+  cursor: pointer;
+}
+.tab {
+  display: none;
+}
+.btn {
+  color: #000;
+}
+.card {
+  right: -330px;
+  z-index: 1;
+  margin-top: 9px !important;
+  position: relative;
+  background-color: #fff;
+}
+.cima {
+  background-color: #ffc700;
+  height: 70px;
+}
+.voltar {
+  padding: 22px;
+}
+@media only screen and (max-width: 800px) {
+  .containerr .wrapper {
     position: relative;
-    background-color: #fff;
- }
- .cima{
-     background-color: #ffc700;
-     height: 70px;
-    
- }
- .voltar{
-   padding: 22px;
- }
- @media only screen and (max-width: 800px) 
- {
- .containerr .wrapper{
-   position: relative;
-   height: 100px;
-   width: 30%;
-   border-radius: 50%;
-   background: #000;
-   border: 2px dashed #ffc700;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   overflow: hidden;
-   left: 35%;
- }
- .containerr{
- 
- position: relative;
- 
- }
- .containerr #custom-btn{
-   margin-top: 20px;
-   display: block;
-   outline: none;
- margin-left: 33% !important;
- 
- 
-   cursor: pointer;
-  
- }
- .card{
-     right: -2%;
-   width: 96%;
-     
- }
- }
- .aaa{
-     border: none;
- }
+    height: 100px;
+    width: 30%;
+    border-radius: 50%;
+    background: #000;
+    border: 2px dashed #ffc700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    left: 35%;
+  }
+  .containerr {
+    position: relative;
+  }
+  .containerr #custom-btn {
+    margin-top: 20px;
+    display: block;
+    outline: none;
+    margin-left: 33% !important;
+
+    cursor: pointer;
+  }
+  .card {
+    right: -2%;
+    width: 96%;
+  }
+}
+.aaa {
+  border: none;
+}
