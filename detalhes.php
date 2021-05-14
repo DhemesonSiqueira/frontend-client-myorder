@@ -14,6 +14,8 @@
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css' rel='stylesheet'>
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css' rel='stylesheet'>
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
@@ -22,8 +24,6 @@
 
 </head>
 
-<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css' rel='stylesheet'>
-<link href='https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css' rel='stylesheet'>
 <style>
     .seta {
         font-size: 28px;
@@ -34,9 +34,7 @@
         color: #000;
     }
 </style>
-<script type='text/javascript' src=''></script>
-<script type='text/javascript' src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js'></script>
-<script type='text/javascript'></script>
+
 </head>
 
 
@@ -55,8 +53,8 @@
     </p> -->
 
 
-    <div class="details">
-        <div class="container  mt-3 "> <a href="cards.php"><i class=" seta fas fa-angle-left float-left"></i></a>
+    <div class="details back-page">
+        <div class="container  mt-3 "> <a href="#"><i class=" seta fas fa-angle-left float-left"></i></a>
             <h4 class="text-center">Detalhes do pedido</h4>
         </div>
     </div>
@@ -141,6 +139,13 @@
         </div>
     </div>
 
+    <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js'></script>
+
+    <script>
+        $(".back-page").click(function() {
+            window.history.back()
+        })
+    </script>
 </body>
 
 </html>

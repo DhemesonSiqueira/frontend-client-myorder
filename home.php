@@ -2,34 +2,15 @@
 <html lang="pt-br">
 
 <head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
     <title>Cardápio Digital - myOrder</title>
-
-    <!-- Custom fonts for this template-->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-    <script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'></script>
-
-    <!-- Custom styles for this template-->
-    <link rel="stylesheet" href="./css/inicio.css">
-    <link href="css/sb-admin-2.min.css" rel="stylesheet">
-
+    <?php include("./head.php") ?>
 </head>
 
 <body class="preto">
-
     <!-- NAV BAR -->
     <?php include_once("navbar.php"); ?>
     <div class="container">
         <h3 class="ainn mt-4">Encontre o melhor <br>lugar para você</h3>
-
         <!-- INPUT DE PESQUISA-->
         <form action="">
             <div class="p-1 bg-light rounded rounded-pill shadow-sm mt-4 mb-4">
@@ -42,29 +23,6 @@
             </div>
         </form>
         <!--/ INPUT DE PESQUISA-->
-        <script type='text/javascript'>
-            $(document).ready(function() {
-                $('.items').slick({
-                    slidesToShow: 8,
-                    slidesToScroll: 3,
-                    arrows: true,
-                    dots: false,
-                    pauseOnHover: false,
-                    responsive: [{
-                        breakpoint: 768,
-                        settings: {
-                            slidesToShow: 4
-                        }
-                    }, {
-                        breakpoint: 520,
-                        settings: {
-                            slidesToShow: 3
-                        }
-                    }]
-                });
-            });
-        </script>
-
         <div class="items">
             <div class="color-icons"><img data-lazy="img/acai.png">
                 <p class="text-center">Açai</p>
@@ -95,11 +53,10 @@
             </div>
 
         </div>
-            
+
         <b>
             <h5 class="ainn  mb-2">Recomendados</h5>
         </b>
-
         <!-- row>  -->
         <div class="row">
             <div class="col-md-4 mt-2 mb-2">
@@ -112,7 +69,6 @@
                     </div>
                 </a>
             </div>
-
             <div class="col-md-4 mt-2 mb-2">
                 <div class="card p-3">
                     <div class="d-flex flex-row mb-3 "><img class="banner" src="https://img.itdg.com.br/tdg/images/recipes/000/106/817/303394/303394_original.jpg?mode=crop&width=710&height=400">
@@ -136,7 +92,7 @@
 
     <!---tab bar--->
     <nav class="tab">
-        <a href="cards.php" class="nav__link ">
+        <a href="home.php" class="nav__link ">
             <i class="nav__icon"><img width="22px" src="img/home-inicial.svg"></i>
             <span style="color: #ffc700;">Inicio </span>
         </a>
@@ -149,9 +105,7 @@
             <span>Perfil</span>
         </a>
     </nav>
-    <!--Slick CSS-->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
 </body>
 
 </html>

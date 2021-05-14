@@ -29,7 +29,7 @@
     </p>
 -->
     <div class="details">
-        <div class="container  mt-3 "> <a href="cards.php"><i class=" seta fas fa-angle-left float-left"></i></a>
+        <div class="container  mt-3 "> <a href="./home.php"><i class="seta fas fa-angle-left float-left"></i></a>
             <h4 class="text-center">Detalhes do pedido</h4>
         </div>
     </div>
@@ -73,7 +73,7 @@
             <!---tab bar--->
             <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
             <nav class="tab">
-                <a href="cards.php" class="nav__link ">
+                <a href="home.php" class="nav__link ">
                     <i class="nav__icon"><img width="22px" src="img/home.svg"></i>
                     <span>Inicio </span>
                 </a>
@@ -88,6 +88,14 @@
             </nav>
         </div>
     </div>
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <script>
+        $(".back-page").click(function() {
+            window.history.back()
+        })
+    </script>
 </body>
 
 </html>
