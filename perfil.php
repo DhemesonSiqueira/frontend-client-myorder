@@ -245,22 +245,8 @@
 
     <!---tab bar--->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <nav class="tab">
-        <nav class="tab">
-            <a style="color: #000;" href="cards.php" class="nav__link ">
-                <i class="nav__icon"><img width="22px" src="img/home.svg"></i>
-                <span>Inicio </span>
-            </a>
-            <a style="color: #000;" href="pedidos.php" class="nav__link ">
-                <i class="nav__icon"><img width="22px" src="img/list.svg"></i>
-                <span>Pedidos</span>
-            </a>
-            <a href="perfil.php" class="nav__link ">
-                <i class="nav__icon"><img width="22px" src="img/user-user.svg"></i>
-                <span style="color: #ffc700;">Perfil</span>
-            </a>
-        </nav>
-    </nav>
+
+    <?php include_once("./tabbar.php"); ?>
 
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>

@@ -51,11 +51,10 @@
             <div class="color-icons"><img data-lazy="img/vegan.png">
                 <p class="text-center">Vegetariana</p>
             </div>
-
         </div>
 
         <b>
-            <h5 class="ainn  mb-2">Recomendados</h5>
+            <h5 class="ainn mb-2">Recomendados</h5>
         </b>
         <!-- row>  -->
         <div class="row">
@@ -91,20 +90,8 @@
     <?php include_once("sacola.php"); ?>
 
     <!---tab bar--->
-    <nav class="tab">
-        <a href="home.php" class="nav__link ">
-            <i class="nav__icon"><img width="22px" src="img/home-inicial.svg"></i>
-            <span style="color: #ffc700;">Inicio </span>
-        </a>
-        <a href="pedidos.php" class="nav__link ">
-            <i class="nav__icon"><img width="22px" src="img/list.svg"></i>
-            <span>Pedidos</span>
-        </a>
-        <a href="perfil.php" class="nav__link ">
-            <i class="nav__icon"><img width="22px" src="img/user.svg"></i>
-            <span>Perfil</span>
-        </a>
-    </nav>
+    <?php include_once("./tabbar.php"); ?>
+
 
 </body>
 

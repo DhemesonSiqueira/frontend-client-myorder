@@ -110,7 +110,7 @@ a {
 .tudo {
   margin-top: -20px;
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
   .perfil {
     border-radius: 50%;
     width: 35%;

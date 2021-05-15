@@ -27,12 +27,12 @@
       <style>
         .nav {
           z-index: 5;
+          width: 100vw;
         }
 
         .profile {
           border-radius: 50%;
           width: 50px;
-
         }
 
         .dropdown-menu {
@@ -40,10 +40,6 @@
         }
 
         .oo {
-          color: #000;
-        }
-
-        .oo:hover {
           color: #000;
         }
 
@@ -76,8 +72,8 @@
 
           <!-- Example single danger button -->
           <div class="btn-group">
-            <button type="button" class="btn cor-btn  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <img style="margin-top:16px" width="20px" height="20px" src="img/list.svg "> <br>
+            <button type="button" class="btn oo dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <img style="margin-top:16px" width="30px" src="./img/order-icon.png"> <br>
               SEU PEDIDO (1)
             </button>
 

@@ -72,20 +72,8 @@
             </div>
             <!---tab bar--->
             <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-            <nav class="tab">
-                <a href="home.php" class="nav__link ">
-                    <i class="nav__icon"><img width="22px" src="img/home.svg"></i>
-                    <span>Inicio </span>
-                </a>
-                <a class="nav__link ">
-                    <i class="nav__icon"><img width="22px" src="img/list-list.svg"></i>
-                    <span style="color: #ffc700;">Pedidos </span>
-                </a>
-                <a href="perfil.php" class="nav__link ">
-                    <i class="nav__icon"><img width="22px" src="img/user.svg"></i>
-                    <span>Perfil</span>
-                </a>
-            </nav>
+            <?php include_once("./tabbar.php"); ?>
+
         </div>
     </div>
 
