@@ -278,9 +278,7 @@ a {
 }
 
 /* Slider */
-.slick-loading .slick-list {
-  background: #fff url("./ajax-loader.gif") center center no-repeat;
-}
+
 .wrapper {
   width: 100%;
   position: absolute;
