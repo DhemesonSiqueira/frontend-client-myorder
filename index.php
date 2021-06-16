@@ -24,13 +24,11 @@
   <?php include_once("navbar.php"); ?>
 
   <div class="mb-4 text-center" id="banner-restaurante">
-    <h3><img class="foto-perfil" src="./img/bannerweb.jpg"></h3>
+    
   </div>
 
   <div class="container preto" id="info-restaurante">
-    <h4 class="nome-local mb-2">Padaria Santa Clara</h4>
-    <div class="mb-2"><i class="fas fa-map-marker-alt"></i> <span>Felipe Camarão, Novo Buritizal - 503</span></div>
-    <div class="mb-2"><i class="far fa-clock"></i> <span>12:00 às 14:00</span> <span class="float-right"><a class="a" href="#" data-toggle="modal" data-target="#exampleModalCennter">Ver mais detalhes</a></span></div>
+    <!-- <div class="mb-2"><i class="far fa-clock"></i> <span>12:00 às 14:00</span> <span class="float-right"><a class="a" href="#" data-toggle="modal" data-target="#exampleModalCennter">Ver mais detalhes</a></span></div> -->
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModalCennter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTtitle" aria-hidden="true">
@@ -55,7 +53,7 @@
 
   <hr class="mb-4">
 
-  <div class="container">
+  <div class="container" id="conteiner-cardapio">
     <h5 class="mb-4 ">Categorias 1</h5>
     <!--start row-->
     <div class="row">
