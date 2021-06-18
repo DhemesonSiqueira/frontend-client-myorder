@@ -50,7 +50,7 @@
 
     <div>
         <form class="container" action="cards.php">
-            <a class="text-center" href="./home.php">
+            <a class="text-center" href="./index.php">
                 <img src="auge.png" alt="logo">
             </a>
             <p>Enviaremos um email para a recuperação de senha</p>

@@ -29,7 +29,7 @@
     </p>
 -->
     <div class="details">
-        <div class="container  mt-3 "> <a href="./home.php"><i class="seta fas fa-angle-left float-left"></i></a>
+        <div class="container  mt-3 "> <a href="./index.php"><i class="seta fas fa-angle-left float-left"></i></a>
             <h4 class="text-center">Detalhes do pedido</h4>
         </div>
     </div>

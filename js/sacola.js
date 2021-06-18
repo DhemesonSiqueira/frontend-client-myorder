@@ -33,9 +33,8 @@ for (const item of itens) {
     conteinerItens.innerHTML += 
     `
         <div class="bg-light comments-box p-3 mt-3">
-            <div class="d-flex justify-content-between align-items-center"></div>
             <div class="d-flex justify-content-between align-items-center">
-                <h6 class="text-muted">${item.nome}</h6>
+                <h6 class="text-muted" style="width: 40%;">${item.nome}</h6>
                 <div class="text-center">${item.quantidade}x</div>
                 <div class="text-center">${item.valor.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</div>
                 <span>

@@ -65,12 +65,6 @@ File name here</div>
     <input id="default-btn" type="file" hidden>
   </div>
 
-
-
-
-
-    
-
 <div class="container">
 
 <script>document.addEventListener("DOMContentLoaded", function(){

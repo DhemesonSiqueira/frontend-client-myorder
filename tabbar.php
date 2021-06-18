@@ -1,6 +1,6 @@
 <nav class="tab">
     <nav class="tab">
-        <a style="color: #000;" href="home.php" class="nav__link ">
+        <a style="color: #000;" href="./index.php" class="nav__link ">
             <img width="22px" src="img/home.svg">
             <span>Inicio </span>
         </a>

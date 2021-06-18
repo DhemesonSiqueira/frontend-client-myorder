@@ -1,10 +1,10 @@
 <nav class="navbar nav navbar-expand-lg navbar-red navbar-dark mb-4 ">
   <div class="wrapper"> </div>
-  <div class="container-fluid all-show"> <a class="navbar-brand" href="home.php"><img src="auge.png" width="120px" height="33px" alt=""></a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+  <div class="container-fluid all-show"> <a class="navbar-brand" href="./index.php"><img src="auge.png" width="120px" height="33px" alt=""></a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
 
-        <li class="nav-item"> <a class="nav-link" href="home.php">Inicio</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="./index.php">Inicio</a> </li>
         <li class="nav-item"> <a class="nav-link" href="seja-parceiro/index.html">Adicione seu restaurante</a> </li>
 
         <!-- <li class="nav-item"> <a class="nav-link" href="entrar.php"> Entre</a> </li>
