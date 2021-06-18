@@ -15,9 +15,7 @@
             <i class="fas fa-user"></i> Thais
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a href="perfil.php" class="dropdown-item"> <i class="fas fa-user"></i> Thais Brito </a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#"> <i class="fas fa-user-edit"></i> Editar informações</a>
+            <a href="./perfil.php" class="dropdown-item"> <i class="fas fa-user"></i> Thais Brito </a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Sair</a>
           </div>

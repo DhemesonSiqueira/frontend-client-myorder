@@ -65,8 +65,9 @@
 
     .perfil {
         border-radius: 50%;
-        width: 20%;
-        height: 200px;
+        width: 180px;
+        height: 180px;
+        margin-top: 80px;
     }
 
     .tab {
@@ -143,18 +144,18 @@
     a {
         text-decoration: none !important;
     }
-
+/* 
     .tudo {
-        margin-top: -20px;
-    }
+        margin-top: 50px;
+    } */
 
-    @media only screen and (max-width: 800px) {
+    @media only screen and (max-width: 1000px) {
 
 
         .perfil {
-            border-radius: 50%;
-            width: 35%;
-            height: 105px;
+            border-radius: 50px;
+            width: 100px;
+            height: 100px;
         }
 
         .nav {
@@ -204,10 +205,6 @@
         .nav__icon {
             font-size: 18px;
         }
-
-        .tudo {
-            margin-top: -100px;
-        }
     }
 
     .aaa {
@@ -220,14 +217,14 @@
 
     <div class="tudo">
 
-        <div class=" text-center bg-light  ">
+        <div class=" text-center bg-light ">
             <br>
 
             <img class="perfil" src="https://image.freepik.com/fotos-gratis/mulher-jovem-sorrindo-alegre-conceito_53876-86699.jpg" alt="">
             <br> <br>
             <b>Thais de Brito Espíndola </b>
             <p>thaisbrito0917@gmail.com</p>
-            <a href="" class="btn btn-warning">Editar Perfil</a>
+            <a href="./conta.php" class="btn btn-warning">Editar Perfil</a>
             <br> <br>
         </div>
 
@@ -238,9 +235,8 @@
         <p><b>Detalhes</b></p>
         <i class=" icon far fa-user"></i><span class="m">Thais de Brito Espíndola</span><br><br>
         <i class=" icon far fa-envelope"></i><span class="m">thaisbrito0917@gmail.com</span> <br><br>
-        <i class="icon fas fa-mobile-alt"></i> <span class="m">96991207512</span> <br><br>
-        <i class="icon fas fa-egg"></i> <span class="m"><a href="entrar.php">Adicione seu restaurante</a> </span><br><br>
-        <i class="icon fas fa-sign-out-alt"></i> <span class="m"><a href="entrar.php">Sair</a></span>
+        <i class="icon fas fa-egg"></i> <span class="m"><a href="./entrar.php">Adicione seu restaurante</a> </span><br><br>
+        <i class="icon fas fa-sign-out-alt"></i> <span class="m"><a href="./entrar.php">Sair</a></span>
     </div>
 
     <!---tab bar--->

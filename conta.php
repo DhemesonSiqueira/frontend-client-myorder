@@ -22,29 +22,19 @@
     <link href="css/conta.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     
-
 </head>
-
-<style>
-  
-
-</style>
 
 <body class=" preto">
 <div class="cima" >
  
-<a class="btn  voltar" href="cards.php"> 
+<a class="btn  voltar" href="./index.php"> 
 <i class="fa fa-arrow-left" aria-hidden="true"></i> Voltar ao menu inicial</a>
 
 </div>
-
    
 <div class="card shadow-lg p-3 mb-5 bg-white rounded col-md-6 ">
   <div class="card-body">
 <b><div class="container mt-3 "><h4 class="text-center" >Cadastro</h4></div></b>
-
-
-
 
     <div class="containerr  mb-3">
     <div class="wrapper">
@@ -130,50 +120,17 @@ File name here</div>
    <div class="form-group">
     <input type="text" required class="form-control mt-2 mb-2" placeholder="Nome" >
         <input type="email" required class="form-control mb-2" placeholder="Email" >
-        <input type="text" data-mask="(00) 00000-0000" required class="form-control mb-2" placeholder="Celular" >
-     <input type="password" placeholder="Senha" class="form-control" id="senha"></br>
+     <input type="password" placeholder="Senha" required class="form-control" id="senha"></br>
      <div class="row" id="barras">
-       <div id="barra" class="col-md-3">Pelo menos 6 caracteres</div>
-       <div id="barra_1" class="col-md-3">Pelo menos 1 letra maiúscula</div>
-       <div id="barra_2" class="col-md-3">Pelo menos 1 número</div>
      </div>
    </div>
    <div class="form-group">
      
-     <input placeholder="Confirmar senha" type="password" class="form-control" id="confirma_senha">
+     <input placeholder="Confirmar senha" type="password" required class="form-control" id="confirma_senha">
    </div>
-  
-
-
-   <div>
-    <label for='codigo'>Enviar código de confrimação para:</label><br>
-    <input type='radio' name='codigo' value='y' required id='codigo'> 
-    <label for="">Email</label>
-<br>
-<input type='radio' name='codigo' value='n'>
-    <label for="">Celular (SMS)</label>
-
-  </div>
-
-
-
-
-
-
-
 
    <button class="btn btn-ama mt-2 col-md-12">Cadastrar</button>         
  </form>
-
-
-
-
-
-
-
-
-
-
 
     <br><br>
 
@@ -214,18 +171,8 @@ File name here</div>
   });
 </script>
 
-
-
-
-
-
-
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" crossorigin="anonymous"></script>
  
-
-
-
 </body>
 
 </html>
