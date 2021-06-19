@@ -25,7 +25,7 @@
       </div>
 
       <!-- FOOTER -->
-      <div class="modal-footer">
+      <div class="modal-footer" id="footer-bag">
         <b>
           <p>Total: R$30,00</p>
         </b> <br>
