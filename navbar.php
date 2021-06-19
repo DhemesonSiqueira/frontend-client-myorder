@@ -10,14 +10,13 @@
         <!-- <li class="nav-item"> <a class="nav-link" href="entrar.php"> Entre</a> </li>
         <li class="nav-item"> <a class="nav-link" href="conta.php"> Cadastra-se</a> </li> -->
 
-        <div class="dropdown">
+        <div class="dropdown" id="option-user">
           <button class="btn oo dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-user"></i> Thais
+            <i class="fas fa-user"></i> Entrar | Casdastre-se
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a href="./perfil.php" class="dropdown-item"> <i class="fas fa-user"></i> Thais Brito </a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Sair</a>
+            <a class="text-center dropdown-item" style="background-color: #ffc700;" href="./conta.php">Criar Conta</a>
+            <a class="btn text-center text-dark dropdown-item" href="./entrar.php">Entrar</a>
           </div>
         </div>
       </ul>
@@ -117,3 +116,27 @@
     </div>
   </div>
 </nav>
+
+<script>
+  if(localStorage.hasOwnProperty("user")){
+    let optionUser = document.getElementById("option-user");
+    const user = JSON.parse(localStorage.getItem("user"))
+
+    optionUser.innerHTML = `
+      <button class="btn oo dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <i class="fas fa-user"></i> ${user.name}
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a href="./perfil.php" class="dropdown-item"> <i class="fas fa-user"></i> Perfil </a>
+      <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Sair</a>
+      </div>
+    `
+  }
+
+  function logout() {
+    localStorage.removeItem("user")
+    location.reload()
+  }
+
+</script>

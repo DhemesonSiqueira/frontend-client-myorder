@@ -19,8 +19,13 @@ formLogin.addEventListener("submit", (e) => {
 })
 
 function setLogin(user) {
-    const userToken = user.token;
-    localStorage.setItem("usertoken", JSON.stringify(userToken))
+    const userData = {
+        token: user.token,
+        name: user.user.name,
+        email: user.user.email,
+        image: user.user.image,
+    }
+    localStorage.setItem("user", JSON.stringify(userData))
     window.location.href = "http://localhost/frontend-client-myorder/index.php"
 }
 // users = ["dhemeson", "email", "senha", {others: "Bah"}]

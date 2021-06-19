@@ -17,7 +17,7 @@
         <span aria-hidden="true" data-dismiss="modal"><i class="fas fa-close"></i></span>
 
         <span class="text-center ">SACOLA</span>
-        <i class="text-danger fa fa-trash"></i>
+        <i onclick="clearBag()" class="text-danger fa fa-trash"></i>
 
       </div>
       <!-- ITENS -->
@@ -26,17 +26,18 @@
 
       <!-- FOOTER -->
       <div class="modal-footer" id="footer-bag">
+      <textarea placeholder="Digite o número da mesa" class="formm form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
         <b>
-          <p>Total: R$30,00</p>
+          <p id="totalOrder"></p>
         </b> <br>
-        <button type="button" class=" btn  col-md-12 btn-amarelo">Fazer pedido</button>
+        <button type="button" class=" btn col-md-12 btn-amarelo">Fazer pedido</button>
       </div>
     </div>
   </div>
 </div>
 <!--Sacola-->
 
-<a class="bolsa-modal" data-toggle="modal" data-target="#exampleModalCenter" style="
+<a onclick="hasItem()" class="bolsa-modal" data-toggle="modal" data-target="#exampleModalCenter" style="
     position:fixed;
     width:60px;
     height:60px;
@@ -49,9 +50,9 @@
     font-size:30px;
     box-shadow: 1px 1px 2px #888;
     z-index:1000;">
-  <div style="font-size: 15px; background-color: #fff; width: 33%; height: 33%; border-radius: 50%; position: absolute; right: 9px; margin-top: 18px;">
+  <div id="qtditens" style="font-size: 15px; background-color: #fff; width: 33%; height: 33%; border-radius: 50%; position: absolute; right: 9px; margin-top: 18px;">
 
-    2
+    
 
   </div>
   <img style="margin-top:16px" width="50%" height="50%" src="./img/bag-icon.svg" />

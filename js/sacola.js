@@ -1,47 +1,19 @@
 var conteinerItens = document.getElementById("conteiner-itens");
-const itens = [
-    {
-        id: 1,
-        nome: "Pizza",
-        quantidade: 2,
-        valor: 25.90,
-    },
-    {
-        id: 2,
-        nome: "Pudim",
-        quantidade: 1,
-        valor: 5,
-    },
-    {
-        id: 3,
-        nome: "Coca-Cola 350ml",
-        quantidade: 2,
-        valor: 4,
-    },
-    {
-        id: 4,
-        nome: "Coxinha",
-        quantidade: 1,
-        valor: 4,
-    },
-    {
-        id: 5,
-        nome: "Suco Verde",
-        quantidade: 1,
-        valor: 7,
-    }
-]
+const bagItens = JSON.parse(localStorage.getItem("bagitens"));
+document.getElementById("qtditens").innerText = bagItens.orderItens.length;
+document.getElementById("totalOrder").innerText = `Valor total: ${Number(bagItens.price).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}`;
 
-// localStorage.hasOwnProperty("produtos") ? console.log("SIM") : console.log("NÃO");
-
-for (const item of itens) {
+for (const item of bagItens.orderItens) {
     conteinerItens.innerHTML += 
     `
         <div class="bg-light comments-box p-3 mt-3">
             <div class="d-flex justify-content-between align-items-center">
-                <h6 class="text-muted" style="width: 40%;">${item.nome}</h6>
-                <div class="text-center">${item.quantidade}x</div>
-                <div class="text-center">${item.valor.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</div>
+                <h6 style="width: 40%;">${item.name} <br>
+                ${item.options.map(option => {return `<span class="text-muted" style="font-size: 12px;"> ${option.name} </span>`} )}
+                </h6><br>
+               
+                <div class="text-center">${item.quantity}x</div>
+                <div class="text-center">${item.price.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</div>
                 <span>
                     <div class="btn-group">
                         <a class="btn" data-toggle="dropdown" href="#">
@@ -50,61 +22,52 @@ for (const item of itens) {
                         </a>
                         <ul class="dropdown-menu">
                         <div class="dropdown-item" style="cursor: pointer;" >Editar item</div>
-                        <div class="dropdown-item" data-idproduto="${item.id}" style="cursor: pointer;" onclick="removerItem(this)">Remover item</div>
+                        <div class="dropdown-item" data-idproduto="${item.product_id}" style="cursor: pointer;" onclick="removerItem(this)">Remover item</div>
                         </ul>
                     </div>
                 </span>
             </div>
         </div>
-    ` 
+    `
 }
 
-// function addItem () {
-    
-    // localStorage.setItem("produtos", JSON.stringify(itens))
-
-    // var produtos = JSON.parse(localStorage.getItem("produtos"))
-
-    // console.log(produtos)
-
-//     conteinerItens.innerHTML += 
-// `
-//     <div class="bg-light comments-box p-3 mt-3">
-//         <div class="d-flex justify-content-between align-items-center"></div>
-//         <div class="d-flex justify-content-between align-items-center">
-//             <h6 class="text-muted">canja de galinha</h6>
-//             <div class="text-center">2x</div>
-//             <div class="text-center">R$15,00</div>
-//             <span>
-//                 <div class="btn-group">
-//                     <a class="btn" data-toggle="dropdown" href="#">
-//                     <img src="https://image.flaticon.com/icons/png/512/64/64576.png" width="15px" alt="">
-//                     <span class="caret"></span>
-//                     </a>
-//                     <ul class="dropdown-menu">
-//                     <div class="dropdown-item" style="cursor: pointer;" id="editarItem">Editar item</div>
-//                     <div class="dropdown-item" style="cursor: pointer;" id="apagarItem" onclick="removerItem(this)">Remover item</div>
-//                     </ul>
-//                 </div>
-//             </span>
-//         </div>
-//     </div>
-// `
-// }
-
 function removerItem(element) {
-    // localStorage.removeItem("produtos")
-    produtoId = element.dataset.idproduto;
+    productId = element.dataset.idproduto;
 
-    indexProduct = itens.findIndex(item => {
-        return item.id == produtoId;
+    indexProduct = bagItens.orderItens.findIndex(item => {
+        return item.product_id == productId;
     })
 
-    itens.splice(indexProduct, 1)
+    bagItens.price -= bagItens.orderItens[indexProduct].price;
+    bagItens.orderItens.splice(indexProduct, 1);
+    localStorage.setItem("bagitens", JSON.stringify(bagItens));
+    var sizeBag = JSON.parse(localStorage.getItem("bagitens"));
 
-    console.log(itens.length)
+    document.getElementById("qtditens").innerText = sizeBag.orderItens.length;
+    console.log(sizeBag)
+    document.getElementById("totalOrder").innerText = `Valor total: ${Number(sizeBag.price).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}`;
 
-    if (itens.length === 0) {
+    if (bagItens.orderItens.length === 0) {
+        conteinerItens.innerHTML = `
+            <p class="text-center corpo container">
+                <img src="img/icone.png" width="35%" alt="">
+                <br>
+                <b>Você ainda não pediu no myOrder! :(</b> <br>
+                <span>Experimente os melhores restaurantes</span>
+            </p>    
+        `
+
+        document.getElementById("footer-bag").innerHTML = "";
+    }else {
+        element.parentNode.parentNode.parentNode.parentNode.parentNode.outerHTML = '';
+    }
+}
+
+function hasItem() {
+    if(localStorage.hasOwnProperty("bagitens")){
+    let sizeItens = JSON.parse(localStorage.getItem("bagitens"));
+
+    if (sizeItens.orderItens.length === 0) {
         conteinerItens.innerHTML = `
             <p class="text-center corpo container">
                 <img src="img/icone.png" width="35%" alt="">
@@ -116,6 +79,24 @@ function removerItem(element) {
 
         document.getElementById("footer-bag").innerHTML = "";
     }
+} else {
+    conteinerItens.innerHTML = `
+            <p class="text-center corpo container">
+                <img src="img/icone.png" width="35%" alt="">
+                <br>
+                <b>Você ainda não pediu no myOrder! :(</b> <br>
+                <span>Experimente os melhores restaurantes</span>
+            </p>    
+    `
+    document.getElementById("footer-bag").innerHTML = "";
+    document.getElementById("qtditens").innerText = "";
+}
+}
 
-    element.parentNode.parentNode.parentNode.parentNode.parentNode.outerHTML = '';
+function clearBag() {
+    let isConfirm = confirm("Deseja limpar a sacola?");
+    if (isConfirm) {
+        localStorage.removeItem("bagitens")
+        hasItem()
+    }
 }

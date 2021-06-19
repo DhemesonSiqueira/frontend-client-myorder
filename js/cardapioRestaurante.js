@@ -100,7 +100,7 @@ function modalBody(elem) {
       <h4 class="nome-local mb-2">${product.name}</h4>
       <div class="mb-2"><span>${product.description}</span></div>
       <span mb-2">${Number(product.price).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</span>
-      <input type="hidden" data-productid="${product.id}">
+      <input type="hidden" data-productid="${product.id}" data-pricepd="${Number(product.price)}" data-productname="${product.name}">
     `;
 
     for (const optionsGroup of product.optionsGroup) {
@@ -112,12 +112,12 @@ function modalBody(elem) {
         for (const option of optionsGroup.options) {
           if (optionsGroup.required && optionsGroup.max_quantity == 1) {
             modalProduto.innerHTML += `
-              <input type="radio" id="r1" name="rr" />
-              <label for="r1"><span></span> ${option.name}  <b class="float-right">${Number(option.price).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</b></label>
+              <input type="radio" id="r1" data-opid="${option.id}" data-priceop="${Number(option.price)}" data-nomepd="${option.name}" name="rr" />
+              <label for="r1"><span></span> ${option.name}  <b class="float-right">${Number(option.price).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</b></label> 
             `;
           } else {
             modalProduto.innerHTML += `
-              <label><input type="checkbox" /><span> . </span> ${option.name} <b class="float-right">${Number(option.price).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</b></label>
+              <label><input type="checkbox" data-opid="${option.id}" data-priceop="${Number(option.price)}" data-nomepd="${option.name}" /> <span> . </span> ${option.name} <b class="float-right">${Number(option.price).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</b></label>
             `;
           }
         }
@@ -146,10 +146,40 @@ function modalBody(elem) {
 }
 
 function addToBag() {
-  let elem = modalProduto.querySelectorAll('input')
+  var elem = modalProduto.querySelectorAll('input')
+  const qtd = document.getElementById("qtdProduto")
+  const bagItens = localStorage.hasOwnProperty("bagitens") ? JSON.parse(localStorage.getItem("bagitens")) : {
+    restauranteId,
+    orderItens: [],
+    price: 0,
+  };
+
+  var itemTotalValue = Number(elem[0].dataset.pricepd);
+  var orderItem = {
+    product_id: elem[0].dataset.productid,
+    name: elem[0].dataset.productname,
+    price: itemTotalValue,
+    quantity: Number(qtd.innerText),
+    options: [],
+  };
 
   for (const option of elem) {
-    
+    if (option.checked) {
+      const optionData = {
+        id: option.dataset.opid,
+        name: option.dataset.nomepd,
+        price: option.dataset.priceop,
+      }
+
+      orderItem.price += Number(option.dataset.priceop);
+      orderItem.options.push(optionData)
+    }
   }
-  console.log(elem[0].dataset.productid, restauranteId)
+
+  bagItens.price += orderItem.price * orderItem.quantity;
+
+  bagItens.orderItens.push(orderItem)
+
+  localStorage.setItem("bagitens", JSON.stringify(bagItens))
+  location.reload()
 }
