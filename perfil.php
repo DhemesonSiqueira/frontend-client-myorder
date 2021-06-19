@@ -11,259 +11,40 @@
 
     <title>Cardápio Digital - myOrder</title>
 
+    <link rel="shortcut icon" href="./img/icon-logo-myorder.png" type="image/x-icon">
+
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
-
-<style>
-    .ainn {
-        font-weight: bold;
-    }
-
-    .spc {
-        margin-top: 80px;
-    }
-
-    #notAuth {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        height: 100vh;
-        width: 100vw;
-        max-width: 500px;
-        margin: 0 auto;
-    }
-
-    .btn-cinza {
-        background-color: #f5f5f0;
-        width: 200px;
-        margin-top: 20px;
-    }
-
-    .container {
-        max-width: 600px;
-        margin-bottom: 50px;
-    }
-
-    .preto {
-        color: #000;
-    }
-
-    .card {
-
-        border: none;
-        border-radius: 10px;
-        background-color: rgba(245, 245, 245, 1);
-    }
-
-    .btn-ama {
-        background-color: #ffc700;
-        color: #fff;
-        width: 200px;
-    }
-
-    .w {
-        background-color: #ffc700;
-        border-radius: 0 0 30px 30px;
-    }
-
-    .a {
-        color: #000;
-    }
-
-    .a:hover {
-        color: #ffc700;
-    }
-
-    .e {
-        color: #ffc700;
-    }
-
-    .m {
-
-        padding: 10px;
-
-    }
-
-    .perfil {
-        border-radius: 50%;
-        width: 180px;
-        height: 180px;
-        margin-top: 80px;
-    }
-
-    .tab {
-        display: none;
-    }
-
-    .icon {
-        color: #ffc700;
-    }
-
-    a {
-        color: #000 !important;
-    }
-
-    /*NAV BAR */
-
-    .nav {
-        position: fixed;
-        width: 100%;
-    }
-
-    .navbar-nav>li>a {
-        text-transform: uppercase;
-        font-size: 12px;
-        margin-right: 20px;
-        color: #fff
-    }
-
-    .navbar-toggler {
-        padding: .20rem .50rem;
-        font-size: 1.25rem;
-        line-height: 1;
-        background-color: transparent;
-        border: 1px solid white
-    }
-
-    .nav-link {
-        color: #000 !important
-    }
-
-    .wrapper {
-        width: 100%;
-        position: absolute;
-        height: 100%;
-        background-color: #ffc700;
-        clip-path: polygon(81% 0, 100% 0, 100% 50%, 100% 100%, 71% 100%);
-        transition: 1s all
-    }
-
-    .navbar-brand {
-        color: #fff;
-        font-family: 'Allerta Stencil', sans-serif;
-        margin-bottom: 4px;
-        font-size: 27px
-    }
-
-    .navbar-red:hover .wrapper {
-        clip-path: polygon(81% 0, 100% 0, 100% 50%, 100% 100%, 65% 100%)
-    }
-
-    .navbar-brand:hover {
-        color: #000
-    }
-
-    .navbar-red {
-        background-color: rgba(245, 245, 245, 1);
-        color: #000;
-    }
-
-    .all-show {
-        z-index: 10
-    }
-
-    a {
-        text-decoration: none !important;
-    }
-/* 
-    .tudo {
-        margin-top: 50px;
-    } */
-
-    @media only screen and (max-width: 1000px) {
-
-
-        .perfil {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-        }
-
-        .nav {
-            display: none;
-        }
-
-        body {
-            margin: 0 0 55px 0;
-        }
-
-        .tab {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            height: 55px;
-            box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
-            background-color: #ffffff;
-            display: flex;
-            overflow-x: auto;
-        }
-
-        .nav__link {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            flex-grow: 1;
-            min-width: 50px;
-            overflow: hidden;
-            white-space: nowrap;
-            font-family: sans-serif;
-            font-size: 13px;
-            color: #444444;
-            text-decoration: none;
-            -webkit-tap-highlight-color: transparent;
-            transition: background-color 0.1s ease-in-out;
-        }
-
-        .nav__link:hover {
-            background-color: #eeeeee;
-        }
-
-        .nav__link--active {
-            color: #009578;
-        }
-
-        .nav__icon {
-            font-size: 18px;
-        }
-    }
-
-    .aaa {
-        border: none;
-    }
-</style>
+    <link rel="stylesheet" href="./css/perfil.css">
 </head>
 
 <body class=" preto">
     <?php include_once("navbar.php"); ?>
 
-    <div id="notAuth">
-    <div class="tudo">
-        <div class=" text-center bg-light ">
-            <br>
-            <img class="perfil" src="https://image.freepik.com/fotos-gratis/mulher-jovem-sorrindo-alegre-conceito_53876-86699.jpg" alt="">
-            <br> <br>
-            <b>Thais de Brito Espíndola </b>
-            <p>thaisbrito0917@gmail.com</p>
-            <a href="./conta.php" class="btn btn-warning">Editar Perfil</a>
-            <br> <br>
+    <div id="notAuth" class="">
+        <div class="tudo">
+            <div class=" text-center bg-light ">
+                <br>
+                <img class="perfil" src="./img/user.png">
+                <br> <br>
+                <b>Thais de Brito Espíndola </b><br>
+                <a href="./conta.php" class="btn btn-warning">Editar Perfil</a>
+                <br> <br>
+            </div>
         </div>
 
-    </div>
-
-    <div class="container">
-        <br>
-        <p><b>Detalhes</b></p>
-        <i class=" icon far fa-user"></i><span class="m">Thais de Brito Espíndola</span><br><br>
-        <i class=" icon far fa-envelope"></i><span class="m">thaisbrito0917@gmail.com</span> <br><br>
-        <i class="icon fas fa-egg"></i> <span class="m"><a href="./entrar.php">Adicione seu restaurante</a> </span><br><br>
-        <i class="icon fas fa-sign-out-alt"></i> <span class="m"><a href="./entrar.php">Sair</a></span>
-    </div>
+        <div class="container">
+            <br>
+            <p><b>Detalhes</b></p>
+            <i class=" icon far fa-user"></i><span class="m">Thais de Brito Espíndola</span><br><br>
+            <i class=" icon far fa-envelope"></i><span class="m">thaisbrito0917@gmail.com</span> <br><br>
+            <i class="icon fas fa-egg"></i> <span class="m"><a href="./entrar.php">Adicione seu restaurante</a> </span><br><br>
+            <i class="icon fas fa-sign-out-alt"></i> <span onclick="logout()" class="m"><a href="">Sair</a></span>
+        </div>
     </div>
     <!---tab bar--->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -274,19 +55,26 @@
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script>
+        if (!localStorage.hasOwnProperty("usertoken")) {
+            var divNoAuth = document.getElementById("notAuth")
+            divNoAuth.innerHTML = `
+                <p class="text-center">
+                    <a href="./index.php">
+                        <img src="./auge.png" class="logo" width="50%">
+                    </a>
+                </p>
+                <h3 class="spc"> Ainda não tem uma conta? </h3>
+                <a class="btn btn-ama" href="./conta.php">Criar Conta</a>
+                <a class="btn btn-cinza text-dark" href="./entrar.php">Entrar</a>
+            `;
 
-if (!localStorage.hasOwnProperty("usertoken")) {
-    document.getElementById("notAuth").innerHTML = `
-    <p class="text-center">
-        <a href="./index.php">
-            <img src="./auge.png" class="logo" width="50%">
-        </a>
-    </p>
-    <h3 class="spc"> Ainda não tem uma conta? </h3>
-    <a class="btn btn-ama" href="./conta.php">Criar Conta</a>
-    <a class="btn btn-cinza text-dark" href="./entrar.php">Entrar</a>
-    `;
-}
+            divNoAuth.classList.add("section-login")
+        }
+
+        function logout() {
+            localStorage.removeItem("usertoken")
+            location.reload()
+        }
     </script>
 </body>
 

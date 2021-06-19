@@ -4,10 +4,15 @@
 .preto {
   color: #000;
 }
+.content-all {
+  display: flex;
+  justify-content: center;
+}
 .card {
   border: none;
   border-radius: 10px;
   background-color: rgba(245, 245, 245, 1);
+  max-width: 500px;
 }
 a {
   color: #000 !important;
@@ -20,6 +25,10 @@ a {
 .containerr {
   position: relative;
   margin-top: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .containerr .wrapper {
   position: relative;
@@ -28,11 +37,7 @@ a {
   border-radius: 50%;
   background: #000;
   border: 2px dashed #ffc700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   overflow: hidden;
-  left: 40%;
 }
 .wrapper.active {
   border: none;
@@ -53,7 +58,7 @@ a {
 .wrapper .icon {
   font-size: 60px;
   text-align: center;
-  margin-left: 50px !important;
+  padding-top: 20px;
 }
 .wrapper .text {
   font-size: 20px;
@@ -75,8 +80,6 @@ a {
   margin-top: 20px;
   display: block;
   outline: none;
-  margin-left: 40% !important;
-
   cursor: pointer;
 }
 .tab {
@@ -102,31 +105,28 @@ a {
 @media only screen and (max-width: 800px) {
   .containerr .wrapper {
     position: relative;
-    height: 100px;
-    width: 30%;
+    height: 150px;
+    width: 150px;
     border-radius: 50%;
     background: #000;
     border: 2px dashed #ffc700;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     overflow: hidden;
-    left: 35%;
   }
   .containerr {
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
   .containerr #custom-btn {
     margin-top: 20px;
     display: block;
     outline: none;
-    margin-left: 33% !important;
-
     cursor: pointer;
   }
   .card {
-    right: -2%;
-    width: 96%;
+    width: 90%;
   }
 }
 .aaa {

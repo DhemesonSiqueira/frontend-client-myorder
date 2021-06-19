@@ -15,13 +15,16 @@
         <form action="">
             <div class="p-1 bg-light rounded rounded-pill shadow-sm mt-4 mb-4">
                 <div class="input-group">
-                    <input type="search" placeholder="Pesquise um restaurante" aria-describedby="button-addon1" class="form-control border-0 bg-light">
+                    <input type="search" onblur="removerResult()" placeholder="Pesquise um restaurante" aria-describedby="button-addon1" class="form-control border-0 bg-light campo">
                     <div class="input-group-append">
                         <button id="button-addon1" type="submit" class="btn btn-link text-warning"><i class="fa fa-search"></i></button>
                     </div>
                 </div>
             </div>
         </form>
+        <ul class="list-group sugestoes">
+
+        </ul>
         <!--/ INPUT DE PESQUISA-->
         <div class="items">
             <div class="color-icons"><img data-lazy="img/acai.png">
@@ -67,7 +70,40 @@
     <!---tab bar--->
     <?php include_once("./tabbar.php"); ?>
 
+    <script>
+        function autoComplete(cidade) {
+            const destino = ['Salvador', 'Vitória', 'Maceió', 'Ceará', 'Rio Branco', 'Macapá', 'Porto Velho', 'Olinda', 'Aracaju', 'Capitólio', 'São Paulo', 'Paraty'];
+            return destino.filter((valor) => {
+                const valorMinusculo = valor.toLowerCase()
+                const cidadeMinusculo = cidade.toLowerCase()
 
+                return valorMinusculo.includes(cidadeMinusculo)
+            })
+        }
+        const campo = document.querySelector('.campo')
+        var sugestoes = document.querySelector('.sugestoes')
+
+        campo.addEventListener('input', ({
+            target
+        }) => {
+            const dadosDoCampo = target.value
+            if (dadosDoCampo.length) {
+                const autoCompleteValores = autoComplete(dadosDoCampo)
+                autoCompleteValores.splice(3)
+                sugestoes.innerHTML = `
+                    ${autoCompleteValores.map((value) => {
+                        return (
+                        `<li class="list-group-item">${value}</li>`
+                        )
+                    }).join('')}
+                `
+            }
+        });
+
+        function removerResult() {
+            sugestoes.innerHTML = "";
+        }
+    </script>
     <script src="./js/api.js"></script>
 
 </body>
