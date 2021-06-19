@@ -18,10 +18,35 @@
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
-</head>
 <style>
     .ainn {
         font-weight: bold;
+    }
+
+    .spc {
+        margin-top: 80px;
+    }
+
+    #notAuth {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        width: 100vw;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .btn-cinza {
+        background-color: #f5f5f0;
+        width: 200px;
+        margin-top: 20px;
+    }
+
+    .container {
+        max-width: 600px;
+        margin-bottom: 50px;
     }
 
     .preto {
@@ -38,6 +63,7 @@
     .btn-ama {
         background-color: #ffc700;
         color: #fff;
+        width: 200px;
     }
 
     .w {
@@ -153,9 +179,9 @@
 
 
         .perfil {
-            border-radius: 50px;
-            width: 100px;
-            height: 100px;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
         }
 
         .nav {
@@ -211,15 +237,15 @@
         border: none;
     }
 </style>
+</head>
 
 <body class=" preto">
     <?php include_once("navbar.php"); ?>
 
+    <div id="notAuth">
     <div class="tudo">
-
         <div class=" text-center bg-light ">
             <br>
-
             <img class="perfil" src="https://image.freepik.com/fotos-gratis/mulher-jovem-sorrindo-alegre-conceito_53876-86699.jpg" alt="">
             <br> <br>
             <b>Thais de Brito Espíndola </b>
@@ -238,7 +264,7 @@
         <i class="icon fas fa-egg"></i> <span class="m"><a href="./entrar.php">Adicione seu restaurante</a> </span><br><br>
         <i class="icon fas fa-sign-out-alt"></i> <span class="m"><a href="./entrar.php">Sair</a></span>
     </div>
-
+    </div>
     <!---tab bar--->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -247,6 +273,21 @@
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+
+if (!localStorage.hasOwnProperty("usertoken")) {
+    document.getElementById("notAuth").innerHTML = `
+    <p class="text-center">
+        <a href="./index.php">
+            <img src="./auge.png" class="logo" width="50%">
+        </a>
+    </p>
+    <h3 class="spc"> Ainda não tem uma conta? </h3>
+    <a class="btn btn-ama" href="./conta.php">Criar Conta</a>
+    <a class="btn btn-cinza text-dark" href="./entrar.php">Entrar</a>
+    `;
+}
+    </script>
 </body>
 
 </html>

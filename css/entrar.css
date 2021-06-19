@@ -2,12 +2,13 @@
   font-weight: bold;
 }
 
+.container {
+  padding-top: 100px;
+}
+
 .main-vw {
-  display: flex;
-  width: 100vw;
   height: 100vh;
-  align-items: center;
-  justify-content: center;
+  width: 100vw;
   background-image: linear-gradient(#ffc700 40%, white 40%, white 100%);
 }
 

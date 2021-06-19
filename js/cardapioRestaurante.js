@@ -98,8 +98,9 @@ function modalBody(elem) {
         </h3>
       </div>
       <h4 class="nome-local mb-2">${product.name}</h4>
-      <span mb-2">${Number(product.price).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</span>
       <div class="mb-2"><span>${product.description}</span></div>
+      <span mb-2">${Number(product.price).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</span>
+      <input type="hidden" data-productid="${product.id}">
     `;
 
     for (const optionsGroup of product.optionsGroup) {
@@ -133,14 +134,22 @@ function modalBody(elem) {
 
       <div class="d-flex justify-content-around" style="height: 45px; margin-bottom: 10px">
         <button type="button" class=" btn btn-outline-secondary" onclick="changeQtd(0)"> - </button>
-        <p class="form-control text-center bg-light" style="font-size: 20px" id="qtdProduto"> 0 </p>
+        <p class="form-control text-center bg-light" style="font-size: 20px" id="qtdProduto"> 1 </p>
         <button type="button" class=" btn btn-outline-secondary" onclick="changeQtd(1)"> + </button>
       </div>
 
-      <button type="button" class="col-md-12 btn btn-amarelo">
+      <button type="button" class="col-md-12 btn btn-amarelo" onclick="addToBag()">
         <span class="add">Adicionar</span>
       </button>
-          
     `;
   })
+}
+
+function addToBag() {
+  let elem = modalProduto.querySelectorAll('input')
+
+  for (const option of elem) {
+    
+  }
+  console.log(elem[0].dataset.productid, restauranteId)
 }
