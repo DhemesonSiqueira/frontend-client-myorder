@@ -26,11 +26,11 @@
 
       <!-- FOOTER -->
       <div class="modal-footer" id="footer-bag">
-      <textarea placeholder="Digite o número da mesa" class="formm form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+      <textarea id="codmesa" placeholder="Digite o número da mesa" class="formm form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
         <b>
           <p id="totalOrder"></p>
         </b> <br>
-        <button type="button" class=" btn col-md-12 btn-amarelo">Fazer pedido</button>
+        <button type="button" onclick="socketConection()" class=" btn col-md-12 btn-amarelo">Fazer pedido</button>
       </div>
     </div>
   </div>
@@ -57,5 +57,5 @@
   </div>
   <img style="margin-top:16px" width="50%" height="50%" src="./img/bag-icon.svg" />
 </a>
-
+<script src="https://cdn.socket.io/4.0.1/socket.io.min.js" integrity="sha384-LzhRnpGmQP+lOvWruF/lgkcqD+WDVt9fU3H4BWmwP5u5LTmkUGafMcpZKNObVMLU" crossorigin="*"></script>
 <script src="./js/sacola.js"></script>

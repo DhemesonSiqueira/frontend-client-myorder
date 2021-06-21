@@ -154,6 +154,10 @@ function addToBag() {
     price: 0,
   };
 
+  if (restauranteId != bagItens.restauranteId){
+    return alert("Você possui itens de outro restaurant na sacola!")
+  }
+
   var itemTotalValue = Number(elem[0].dataset.pricepd);
   var orderItem = {
     product_id: elem[0].dataset.productid,
